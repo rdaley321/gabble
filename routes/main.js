@@ -15,8 +15,11 @@ var sess
 router.get('/', function(req, res) {
   sess = req.session
   if (sess.username) {
-    models.gab.findAll().then(function(gabs){
-      return res.render('index', {user: sess.username, gabs: gabs})
+    models.gab.findAll().then(function(gabs) {
+      return res.render('index', {
+        user: sess.username,
+        gabs: gabs
+      })
     })
   } else {
     return res.redirect('/login')
@@ -41,8 +44,16 @@ router.get('/login', function(req, res) {
 })
 
 router.post('/creategab', function(req, res) {
-  models.gab.create({postedby: sess.username, msg: req.body.gab, likes: 0}).then(function() {
+  models.gab.create({postedby: sess.username, msg: req.body.gab, likes: 0, likedby: []}).then(function() {
     return res.redirect('/create')
+  })
+})
+
+router.post('/like', function(req, res) {
+  models.gab.build({
+    id: req.body.id
+  }, {isNewRecord: false}).increment('likes').then(function() {
+    return res.redirect('/')
   })
 })
 

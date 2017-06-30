@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: 'Comfortaa', cursive;
+}
+
+body {
+  background-color: pink;
+}
+
+header {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 5vw;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: normal;
+  border: 1px solid black;
+  width: 30vw;
+  margin-top: 1vw;
+  padding: 1vw;
+  color: green;
+}
+
+.main-content {
+  padding-top: 3vw;
+}
+
+.posts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border-bottom: solid green 1px;
+  padding-top: 2vw;
+  width: 80%;
+}
+
+.content {
+  margin-left: 5vw;
+  margin-bottom: 2vw;
+  flex-basis: 60%;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding-bottom: 2vw;
+}
+
+.who-posted {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.date {
+  font-style: italic;
+}
+
+.buttons {
+  margin-left: 0
+}
+
+.buttons button {
+  padding: .6vw;
+  border-radius: 5vw;
+  background-color: white;
+}
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  padding-top: 1.7vw;
+}
+
+.main-form h3 {
+  padding-top: 2vw;
+}
+
+.main-form input {
+  width: 20vw;
+  height: 2.5vw;
+  font-size: 1em;
+}
+
+.main-form button {
+  font-size: 1.5em;
+  padding: 1vw;
+  border-radius: 5vw;
+  background-color: white;
+  margin-top: 2vw;
+}
+
+.new-gab-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 5vw;
+}
+
+.new-gab-form button {
+  font-size: 2em;
+  padding: 1vw;
+  background-color: white;
+  border-radius: 5vw;
+  margin-top: 3vw;
+}
