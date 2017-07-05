@@ -26,7 +26,14 @@
           <br>
           <span class="date">{{createdAt}}</span>
           <br>
-          <span class='likes'>{{likes}}</span> likes
+          <div class="likes-div">
+            <div class="likes-content">
+              <span class='likes'>{{likes}}</span> <span>likes<span>
+            </div>
+            <form class="likes-form" action="/wholikedthis" method="post">
+              <button type="submit" name="id" value="{{id}}">Who liked this?</button>
+            </form>
+          </div>
         </div>
         <div class="buttons">
           <form class="" action="/like" method="post">

@@ -75,6 +75,14 @@ h1 {
   background-color: white;
 }
 
+.likes-content {
+  display: inline;
+}
+
+.likes-form {
+  display: inline;
+}
+
 .main-form {
   display: flex;
   flex-direction: column;
@@ -115,4 +123,32 @@ h1 {
   background-color: white;
   border-radius: 5vw;
   margin-top: 3vw;
+}
+
+h2 {
+  padding-top: 1vw;
+  width: 80%;
+  font-size: 2em;
+}
+
+ul {
+  list-style: none;
+  line-height: 1.5em;
+  font-size: 1.4em;
+  width: 83%;
+}
+
+.content-likes {
+  margin-left: 10vw;
+  margin-bottom: 2vw;
+  flex-basis: 60%;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding-bottom: 2vw;
+  padding-top: 2vw;
+}
+
+.errors {
+  color: red;
+  font-size: 1.5em;
 }

@@ -18,6 +18,11 @@
   </header>
   <h1>Create a new gab</h1>
   <form class="new-gab-form" action="/creategab" method="post">
+    <div class="errors">
+      {{#errors}}
+        {{message}}
+      {{/errors}}
+    </div>
     <textarea name="gab" rows="8" cols="80"></textarea>
     <button type="submit" name="submit">Save gab</button>
   </form>

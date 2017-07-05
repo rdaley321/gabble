@@ -17,11 +17,16 @@
   </header>
   <h1>Sign up</h1>
   <form class="main-form" action="/signup" method="post">
+    <div class="errors">
+      {{#errors}}
+        {{message}}
+      {{/errors}}
+      {{nonmatching}}
+    </div>
     <h3>Username</h3>
     <input type="text" name="username" value="">
     <h3>Password</h3>
     <input type="password" name="password" value="">
-    {{nonmatching}}
     <h3>Password confirmation</h3>
     <input type="password" name="confirm" value="">
     <button type="submit" name="submit">Sign up</button>

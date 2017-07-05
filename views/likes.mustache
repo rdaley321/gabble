@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="http://0.0.0.0:3000/">Gabble</a>
+    <a href="http://0.0.0.0:3000/create">Create a new gab</a>
+    <form class="" action="/logout" method="post">
+      <button type="submit" name="submit">Log out</button>
+    </form>
+  </header>
+  <h1>Logged in as {{user}}</h1>
+  <div class="main-content">
+    {{#gab}}
+      <div class="content-likes">
+        <span class="who-posted">{{postedby}}</span>: <span class='msg'>{{msg}}</span>
+        <br>
+        <span class="date">{{createdAt}}</span>
+      </div>
+      <h2>Liked by</h2>
+      <ul>
+        {{#likedby}}
+          <li>{{.}}</li>
+        {{/likedby}}
+      </ul>
+    {{/gab}}
+  </div>
+  <script src="/js/client.js" charset="utf-8"></script>
+</body>
+
+</html>
